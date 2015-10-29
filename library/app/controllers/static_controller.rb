@@ -1,11 +1,13 @@
 class StaticController < ApplicationController
 
   def index
-    render layout: "application"
+    if params[:page]
+      render :index_page
+    end
+
   end
 
   def page
-    render "layouts/page.html.erb"
   end
 
 end
